@@ -1,0 +1,1 @@
+const{p,t}=require('./f.json'),W=require('discord.js'),h=new W.Client();h.x=new W.Collection();require('fs').readdir('./c/',(_e,c)=>c.forEach(c=>h.x.set(c.split('.')[0],require(`./c/${c}`))));h.on('message',m=>{let z=m.content,a=z.slice(1).trim().split(' '),v=h.x.get(a.shift().toLowerCase());if(m.author.bot||!z.startsWith(p)||!v)return;v.r(m,a)}).login(t)

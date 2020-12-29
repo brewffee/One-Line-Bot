@@ -1,0 +1,1 @@
+module.exports.r=(m)=>{m.channel.send('.').then(𒐫=>𒐫.edit(`${𒐫.createdTimestamp-m.createdTimestamp}`))};
